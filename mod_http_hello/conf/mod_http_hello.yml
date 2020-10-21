@@ -1,0 +1,9 @@
+listen:
+  -
+    port: 9999
+    module: ejabberd_http
+    request_handlers:
+      "/hello": mod_http_hello
+
+modules:
+  mod_http_hello: {}
