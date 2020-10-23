@@ -1,5 +1,22 @@
 # MoneyChat-Backend
 
+### How to Write a Custom Module
+All ejabberd modules are implementing the gen_mod behaviour. It means that a module must provide the following API:
+
+```
+start(Host, Opts) -> ok
+stop(Host) -> ok
+depends(Host, Opts) -> []
+mod_options(Host) -> []
+```
+
+Host is the name of the virtual host running the module. The start/2 and stop/1 functions are called for each virtual host at start and stop time of the server.
+
+Opts is a lists of options as defined in the configuration file for the module. They can be retrieved with the gen_mod:get_opt/3 function.
+
+You can install the [mod_hello](mod_hello) module to see how these function works.
+
+
 ### To use an ejabberd module coming from this repository:
 
 You need to have ejabberd installed.
@@ -30,3 +47,6 @@ priv/msgs/: Directory with translation files (pot, po and msg).
 conf/<module>.yml: Configuration for your module.  
 <module>.spec: Yaml description file for your module.  
 ```
+
+### Reference
+[Ejabberd Custom Module](https://docs.ejabberd.im/developer/extending-ejabberd/modules/)
