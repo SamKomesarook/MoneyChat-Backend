@@ -11,3 +11,17 @@ Run `ejabberdctl module_install <module>` to get the source code and to compile 
 Edit the configuration file provided in the conf directory of the installed module and update it to your needs. Then apply the changes to your main ejabberd configuration. In a future release, ejabberd will automatically add this file to its runtime configuration without changes.
 
 Run `ejabberdctl module_uninstall <module>` to remove a module from ejabberd.
+
+
+### Module Directory Structure
+The module directory structure is usually the following:
+```
+README.txt: Module description.  
+COPYING: License for the module.  
+doc/: Documentation directory.  
+src/: Erlang source directory.  
+lib/: Elixir source directory.  
+priv/msgs/: Directory with translation files (pot, po and msg).  
+conf/<module>.yml: Configuration for your module.  
+<module>.spec: Yaml description file for your module.  
+```
