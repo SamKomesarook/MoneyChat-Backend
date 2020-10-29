@@ -1,0 +1,7 @@
+Issues Left:
+
+- JWT Token Authentication
+
+We can enable the JWT authentication with Ejabberd but we're stil not able to generate the JWT token automatically and send it back to client.
+So currently, client will still need to use the password to login every time.
+Please refer to Technical Report for more details.
