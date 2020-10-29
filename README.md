@@ -48,5 +48,8 @@ conf/<module>.yml: Configuration for your module.
 <module>.spec: Yaml description file for your module.  
 ```
 
+### Deployment
+Please refer to the Development Guide for instructions on how to setup and deploy the project.
+
 ### Reference
 [Ejabberd Custom Module](https://docs.ejabberd.im/developer/extending-ejabberd/modules/)
